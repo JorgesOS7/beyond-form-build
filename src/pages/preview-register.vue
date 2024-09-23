@@ -4,7 +4,7 @@ import { TButton, TInput, TCheckboxGroup, TRadioGroup } from "vue-tailwind/dist/
 import { useRouter, useToast } from '@/composables';
 import { useForm } from '@/store';
 import { storeToRefs } from 'pinia';
-import { onMounted, ref } from 'vue';
+import { h, onMounted, ref } from 'vue';
 
 const router = useRouter()
 const store = useForm()
@@ -16,8 +16,9 @@ const checks = ref([])
 const goBack = () => router.back()
 
 const onSubmit = () => {
-    console.log(orderedForms.value.map((form => form.value)))
-    toast.success('OK')
+    const values = orderedForms.value.map((form => form.value))
+
+    toast.success(`Os valores do formulário foram ${values.join(',')} \n ${checks.value.join(',')}`)
 }
 </script>
 <template>
