@@ -43,7 +43,7 @@ Segue lista dos principais pacotes utilizados no projeto:
 Clone o projeto
 
 ```bash
-git clone https://link-para-o-projeto
+git clone https://github.com/JorgesOS7/beyond-form-build
 ```
 
 Entre no diretório do projeto
